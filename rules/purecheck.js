@@ -14,7 +14,8 @@ function getMessage(e) {
 		case ErrorType.WriteNonLocal:
 			return 'Only local variables can be updated';
 		default:
-			throw Error(`Unrecognized error type: ${e.type}/${ErrorType[e.type]}`);
+			// throw Error(`Unrecognized error type: ${e.type}/${ErrorType[e.type]}`);
+			return ErrorType[e.type]
 	}
 }
 
